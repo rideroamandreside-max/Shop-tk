@@ -537,4 +537,20 @@
 
       feedback.textContent = "Order placed successfully!";
       document.getElementById("custName").value = "";
-      document.getElementById("custPhone").value 
+      document.getElementById("custPhone").value       document.getElementById("custRoom").value = "";
+      document.getElementById("custAddress").value = "";
+      document.getElementById("custLocationLink").value = "";
+      document.getElementById("locationStatus").textContent = 'Tap "Use Live Location" to attach exact GPS map link.';
+    });
+
+    if (isCustomerOnly) {
+      document.getElementById("headerActions").classList.add("hidden");
+    }
+
+    renderAll();
+    loadFromFirebase();
+    setInterval(loadFromFirebase, 6000);
+  </script>
+</body>
+</html>
+
